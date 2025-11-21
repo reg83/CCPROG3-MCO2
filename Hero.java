@@ -5,12 +5,11 @@ public class Hero extends Character {
      * @param hp Health Points of the Hero
      * @param maxHp Maximum Health Points of the Hero
      * @param atk Attack Power of the Hero
-     * @param lvl Level of the Hero
      * @param x X-coordinate of the Hero's position
      * @param y Y-coordinate of the Hero's position
      */
-    public Hero(String name, float hp, float maxHp, float atk, int lvl, int x, int y){
-        super(name, hp, maxHp, atk, lvl, x, y);
+    public Hero(String name, float hp, float maxHp, float atk, int x, int y){
+        super(name, hp, maxHp, atk, x, y);
     }
 
     /**
@@ -37,14 +36,6 @@ public class Hero extends Character {
             pup.increaseHp(this);
         } else {
             pup.increaseAtk(this);
-        }
-    }
-
-    public void lvlUp(int dungeonLevel){
-        super.lvlUp(dungeonLevel);
-        hp += 3;
-        if (hp > maxHp) {
-            hp = maxHp;
         }
     }
 

@@ -155,16 +155,4 @@ public class Bomb {
         }
     }
 
-    public void setBombDamage(int dungeonLevel) {
-        switch(dungeonLevel){
-            case 1: baseAtk = 3;
-            break;
-            case 2: baseAtk = 5;
-            break;
-            case 3: baseAtk = 7;
-            break;
-            default:
-                baseAtk = 3;
-        }
-}
 }

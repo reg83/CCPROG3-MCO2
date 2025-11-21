@@ -13,7 +13,6 @@ class Character {
      * @param hp Health Points of the Character
      * @param maxHp Maximum Health Points of the Character
      * @param atk Attack Power of the Character
-     * @param lvl Level of the Character
      * @param x X-coordinate of the Character's position
      * @param y Y-coordinate of the Character's position
      */
@@ -21,7 +20,6 @@ class Character {
     protected float hp;
     protected float maxHp;
     protected float atk;
-    protected int lvl;
     protected int x;
     protected int y;
     /**
@@ -30,16 +28,14 @@ class Character {
      * @param hp Health Points of the Character
      * @param maxHp Maximum Health Points of the Character
      * @param atk Attack Power of the Character
-     * @param lvl Level of the Character
      * @param x X-coordinate of the Character's position
      * @param y Y-coordinate of the Character's position
      */
-    public Character(String name, float hp, float maxHp, float atk, int lvl, int x, int y){
+    public Character(String name, float hp, float maxHp, float atk, int x, int y){
         this.name = name;
         this.hp = hp;
         this.maxHp = maxHp;
         this.atk = atk;
-        this.lvl = lvl;
         this.x = x;
         this.y = y;
     }
@@ -70,13 +66,6 @@ class Character {
      */
     public float getAtk(){
         return atk;
-    }
-    /**
-     * Getters for Hero attributes
-     * @return lvl of the hero
-     */
-    public int getLvl(){
-        return lvl;
     }
     /**
      * Getters for Hero attributes
@@ -125,12 +114,6 @@ class Character {
         else{
             return false;
         }
-    }
-    /**
-     * Method to level up the Hero
-     */
-    public void lvlUp(int dungeonLevel){
-        this.lvl = dungeonLevel;
     }
 
     /**

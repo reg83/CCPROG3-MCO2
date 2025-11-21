@@ -2,8 +2,8 @@ public class SniperZombie extends Zombie {
 
     private int range;
 
-    public SniperZombie(String name, float hp, float maxHp, float atk, int lvl, int x, int y, String type, int dr, int range) {
-        super(name, hp, maxHp, atk, lvl, x, y, "Sniper", 5);
+    public SniperZombie(String name, float hp, float maxHp, float atk, int x, int y, String type, int dr, int range) {
+        super(name, hp, maxHp, atk, x, y, "Sniper", 5);
         this.range = range;
     }
 

@@ -8,14 +8,13 @@ class Zombie extends Character {
      * @param hp Health Points of the Zombie
      * @param maxHp Maximum Health Points of the Zombie
      * @param atk Attack Power of the Zombie
-     * @param lvl Level of the Zombie
      * @param x X-coordinate of the Zombie's position
      * @param y Y-coordinate of the Zombie's position
      * @param type Type of the Zombie
      * @param dr Detection Range of the Zombie
      */
-    public Zombie(String name, float hp, float maxHp, float atk, int lvl, int x, int y, String type, int dr){
-        super(name, hp, maxHp, atk, lvl, x, y);
+    public Zombie(String name, float hp, float maxHp, float atk, int x, int y, String type, int dr){
+        super(name, hp, maxHp, atk, x, y);
         this.type = type;
         this.detectRange = dr;
     }

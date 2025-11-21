@@ -14,7 +14,6 @@ public class Dungeon {
      * @param height Height of the Dungeon
      * @param spawnPointX X-coordinate of the Hero's spawn point
      * @param spawnPointY Y-coordinate of the Hero's spawn point
-     * @param dungeonLevel Level of the Dungeon
      * @param isCleared Indicates if the Dungeon is cleared
      * @param tiles 2D array of Tiles in the Dungeon
      * @param walls 2D array of Walls in the Dungeon
@@ -24,7 +23,6 @@ public class Dungeon {
     private int height;
     private int spawnPointX;
     private int spawnPointY;
-    private int dungeonLevel;
     private boolean isCleared;
     public Tile[][] tiles;
     public Wall[][] walls;
@@ -37,16 +35,14 @@ public class Dungeon {
      * @param h Height of the Dungeon
      * @param spawnPointX X-coordinate of the Hero's spawn point
      * @param spawnPointY Y-coordinate of the Hero's spawn point
-     * @param dungeonLevel Level of the Dungeon
      * @param isCleared Indicates if the Dungeon is cleared
      */
-    public Dungeon(String name, int w, int h, int spawnPointX, int spawnPointY, int dungeonLevel, boolean isCleared){
+    public Dungeon(String name, int w, int h, int spawnPointX, int spawnPointY, boolean isCleared){
         this.name = name;
         this.width = w;
         this.height = h;
         this.spawnPointX = spawnPointX;
         this.spawnPointY = spawnPointY;
-        this.dungeonLevel = dungeonLevel;
         this.isCleared = isCleared;
         this.tiles = new Tile[height][width];
         this.walls = new Wall[height][width];
@@ -93,10 +89,6 @@ public class Dungeon {
      */
     public int getSpawnPointY(){
         return spawnPointY;
-    }
-
-    public int getDungeonLevel(){
-        return dungeonLevel;
     }
 
     public boolean getIsCleared(){
@@ -162,7 +154,5 @@ public class Dungeon {
         zombies[z.getY()][z.getX()] = null;
     }
 
-    public void lvlUp(){
-        this.dungeonLevel++;
-    }
+    
 }
